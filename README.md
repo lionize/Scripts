@@ -18,7 +18,7 @@
 
 #### Chocolatey Packages
 
-TBD
+[kubernetes-cli](https://chocolatey.org/packages/kubernetes-cli)
 
 #### Docker Desktop
 
