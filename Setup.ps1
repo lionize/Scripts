@@ -21,7 +21,7 @@ elseif ($IsFedora) {
     sudo dnf -y install docker-compose
 }
 elseif ($IsUbuntu) {
-    Write-Host TBD
+    sudo apt -y install docker-compose
 }
 else {
     Write-Error "OS and/or distribution is not supported"
