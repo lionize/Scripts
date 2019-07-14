@@ -2,7 +2,11 @@
 
 ## Prerequisites
 
-#### PowerShell Core 
+#### .NET Core SDK
+
+[Install .NET Core SDK](https://dotnet.microsoft.com/download)
+
+#### PowerShell Core
 
 [Get PowerShell](https://github.com/PowerShell/PowerShell#get-powershell)
 
