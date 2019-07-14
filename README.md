@@ -10,7 +10,7 @@
 
 [psake](https://www.powershellgallery.com/packages/psake/)
 
-### Chocolatey
+### Chocolatey (Windows)
 
 [Installing Chocolatey](https://chocolatey.org/install)
 
