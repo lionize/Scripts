@@ -14,7 +14,7 @@
 
 [Installing Chocolatey](https://chocolatey.org/install)
 
-### Chocolatey Packages
+### Chocolatey Packages (Windows)
 
 TBD
 
