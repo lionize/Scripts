@@ -18,7 +18,7 @@ if ($IsWindows) {
     choco install kubernetes-cli
 }
 elseif ($IsFedora) {
-    Write-Host TBD
+    sudo dnf -y install docker-compose
 }
 elseif ($IsUbuntu) {
     Write-Host TBD
