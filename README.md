@@ -10,14 +10,16 @@
 
 [psake](https://www.powershellgallery.com/packages/psake/)
 
-### Chocolatey (Windows)
+### Windows
+
+#### Chocolatey
 
 [Installing Chocolatey](https://chocolatey.org/install)
 
-### Chocolatey Packages (Windows)
+#### Chocolatey Packages
 
 TBD
 
-### Docker Desktop (Windows)
+#### Docker Desktop
 
 [Install](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
