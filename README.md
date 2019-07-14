@@ -9,3 +9,15 @@
 ### PowerShell Core Modules
 
 [psake](https://www.powershellgallery.com/packages/psake/)
+
+### Chocolatey
+
+[Installing Chocolatey](https://chocolatey.org/install)
+
+### Chocolatey Packages
+
+TBD
+
+### Docker Desktop (Windows)
+
+[Install](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
