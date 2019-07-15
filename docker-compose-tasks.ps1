@@ -7,5 +7,5 @@ Task Pull {
 }
 
 Task Setup -depends Pull {
-    Exec { docker-compose -f (Resolve-Path "docker-compose/dependencies.yml").Path pull }
+    Exec { docker-compose -f (Resolve-Path "docker-compose/dependencies.yml").Path up -d }
 }
