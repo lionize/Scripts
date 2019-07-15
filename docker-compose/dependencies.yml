@@ -27,6 +27,8 @@ services:
       - SERVE_ADMIN_CORS_ALLOWED_METHODS=POST,GET,PUT,DELETE
     depends_on:
       - hydra-migrate
+    networks:
+      - lionize
     restart: unless-stopped
 
   consent:
@@ -35,6 +37,8 @@ services:
     image: oryd/hydra-login-consent-node:v1.0.0-rc.10
     ports:
       - "3000:3000"
+    networks:
+      - lionize
     restart: unless-stopped
 
   hydra-migrate:
@@ -43,6 +47,8 @@ services:
       - DSN=postgres://hydra:secret@postgresd:5432/hydra?sslmode=disable&max_conns=20&max_idle_conns=4
     command:
       migrate sql -e --yes
+    networks:
+      - lionize
     restart: on-failure
 
   postgresd:
@@ -53,4 +59,9 @@ services:
       - POSTGRES_USER=hydra
       - POSTGRES_PASSWORD=secret
       - POSTGRES_DB=hydra
+    networks:
+      - lionize
 
+networks:
+      lionize:
+        driver: bridge
