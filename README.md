@@ -10,6 +10,10 @@
 
 [Get PowerShell](https://github.com/PowerShell/PowerShell#get-powershell)
 
+#### NodeJS
+
+[Install NodeJS](https://nodejs.org/en/download/)
+
 ### Windows
 
 #### Chocolatey
