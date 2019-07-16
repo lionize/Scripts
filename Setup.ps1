@@ -1,4 +1,5 @@
 Install-Module -Name psake
+Install-Module -Name PsHosts
 
 dotnet tool install --global smite-cli
 dotnet tool update --global smite-cli
