@@ -4,3 +4,9 @@ services:
 
   identity:
     image: tiksn/lionize-identity-management-service
+    networks:
+      - lionize
+
+networks:
+      lionize:
+        driver: bridge
