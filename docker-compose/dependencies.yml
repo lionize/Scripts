@@ -9,3 +9,9 @@ services:
       - SA_PASSWORD=z0aiDwJ0205q37Nr
     ports:
       - "1433:1433"
+    networks:
+      - lionize
+
+networks:
+      lionize:
+        driver: bridge
