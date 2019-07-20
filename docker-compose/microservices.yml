@@ -7,6 +7,13 @@ services:
     networks:
       - lionize
 
+  web-ui:
+    image: ashotnazaryan45/lionize-web-ui:latest
+    ports:
+      - 3001:3000
+    networks:
+      - lionize
+
 networks:
       lionize:
         driver: bridge
