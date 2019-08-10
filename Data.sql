@@ -6,36 +6,6 @@ IF NOT EXISTS ( SELECT * FROM [dbo].[AspNetUsers] WHERE [Id] = N'ff8a22f6-0991-4
 GO
 SET IDENTITY_INSERT [dbo].[AspNetUserClaims] ON 
 GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (1, N'5e4fd556-0caa-487b-b9eb-d3c29725df55', N'name', N'Alice Smith')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (2, N'5e4fd556-0caa-487b-b9eb-d3c29725df55', N'given_name', N'Alice')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (3, N'5e4fd556-0caa-487b-b9eb-d3c29725df55', N'family_name', N'Smith')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (4, N'5e4fd556-0caa-487b-b9eb-d3c29725df55', N'email', N'AliceSmith@email.com')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (5, N'5e4fd556-0caa-487b-b9eb-d3c29725df55', N'email_verified', N'true')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (6, N'5e4fd556-0caa-487b-b9eb-d3c29725df55', N'website', N'http://alice.com')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (7, N'5e4fd556-0caa-487b-b9eb-d3c29725df55', N'address', N'{ ''street_address'': ''One Hacker Way'', ''locality'': ''Heidelberg'', ''postal_code'': 69118, ''country'': ''Germany'' }')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (8, N'ff8a22f6-0991-42ba-9c05-d9ab987cd224', N'name', N'Bob Smith')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (9, N'ff8a22f6-0991-42ba-9c05-d9ab987cd224', N'given_name', N'Bob')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (10, N'ff8a22f6-0991-42ba-9c05-d9ab987cd224', N'family_name', N'Smith')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (11, N'ff8a22f6-0991-42ba-9c05-d9ab987cd224', N'email', N'BobSmith@email.com')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (12, N'ff8a22f6-0991-42ba-9c05-d9ab987cd224', N'email_verified', N'true')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (13, N'ff8a22f6-0991-42ba-9c05-d9ab987cd224', N'website', N'http://bob.com')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (14, N'ff8a22f6-0991-42ba-9c05-d9ab987cd224', N'address', N'{ ''street_address'': ''One Hacker Way'', ''locality'': ''Heidelberg'', ''postal_code'': 69118, ''country'': ''Germany'' }')
-GO
-INSERT [dbo].[AspNetUserClaims] ([Id], [UserId], [ClaimType], [ClaimValue]) VALUES (15, N'ff8a22f6-0991-42ba-9c05-d9ab987cd224', N'location', N'somewhere')
-GO
 SET IDENTITY_INSERT [dbo].[AspNetUserClaims] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Clients] ON 
@@ -84,7 +54,7 @@ SET IDENTITY_INSERT [dbo].[Clients] OFF
 GO
 SET IDENTITY_INSERT [dbo].[ClientGrantTypes] ON 
 GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (1, N'client_credentials', 1)
+INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (1, N'password', 1)
 GO
 INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (2, N'client_credentials', 9)
 GO
@@ -340,7 +310,7 @@ INSERT [dbo].[ClientSecrets] ([Id], [Description], [Value], [Expiration], [Type]
 GO
 INSERT [dbo].[ClientSecrets] ([Id], [Description], [Value], [Expiration], [Type], [Created], [ClientId]) VALUES (4, N'Client 15 description', N'ghQ3BhumhFuVh6wSn7eD4yFhSC3hBbtzvonhnekw6v5xqn7JKkmstUnr/+5fZBdPoXnRiAhckH1Yw0eRxOdyZJytoPQ5urnXtZPk9gbNFFpykvtvX2H2FRkAcGYCGvBieJpRscMiFue/+dN1eJp2i6/tHzLrAwQ7t4vbOElT1ZqigX1re2KXT3wTr2aOgJ1/iuS2FPu+dnWWFvk3R96dbCM40vYdCw9NVs+12FOerTfuW65lncGf5AoH1WVpXweedUNCVa6mYn/VaL4rCJ4i+GnCSewvOM5ime3rFTWq5PbIF2IPW1eJR/kvjzQCc9xs5N38phYbbjx04LzAukxJKw==', CAST(N'2020-07-17T22:25:06.4170704' AS DateTime2), N'SharedSecret', CAST(N'2019-07-17T19:25:06.4172196' AS DateTime2), 4)
 GO
-INSERT [dbo].[ClientSecrets] ([Id], [Description], [Value], [Expiration], [Type], [Created], [ClientId]) VALUES (5, N'Client 0 description', N'HR7FsThALW0k6MD1Bo+PLOaJss2Bz7RiTsWIWlsIs+veTtrVf6HmBoY13NRORcWMhvRVr1G1m01pY2NyuNMSHDTUF7e1ua1FoqtGTPPgEwgA+9NmsgSaKLOMbBw+c06zIsCgei4N18xHEAylbk5aiVBacr3/rGkvOu4EKE2RBi5dkykzP5ja8yQGH6L49LlkMuLL5AGQs3ZWcEA/CK5/tgndSNslJ0m3f3+Y+IzGN0U0oPVqxSItzOCz3M9Ymup1h2mZGqzePwuYFGSC97rpkDn7Cmi5FPDmsHv6cUt6XuWVI3EjLR2YVmDq0rC+q9QlykuWXY+BvHJ4smkx487AHQ==', CAST(N'2020-07-17T22:25:06.0026121' AS DateTime2), N'SharedSecret', CAST(N'2019-07-17T19:25:06.3078730' AS DateTime2), 1)
+INSERT [dbo].[ClientSecrets] ([Id], [Description], [Value], [Expiration], [Type], [Created], [ClientId]) VALUES (5, N'User Management Client', N'HR7FsThALW0k6MD1Bo+PLOaJss2Bz7RiTsWIWlsIs+veTtrVf6HmBoY13NRORcWMhvRVr1G1m01pY2NyuNMSHDTUF7e1ua1FoqtGTPPgEwgA+9NmsgSaKLOMbBw+c06zIsCgei4N18xHEAylbk5aiVBacr3/rGkvOu4EKE2RBi5dkykzP5ja8yQGH6L49LlkMuLL5AGQs3ZWcEA/CK5/tgndSNslJ0m3f3+Y+IzGN0U0oPVqxSItzOCz3M9Ymup1h2mZGqzePwuYFGSC97rpkDn7Cmi5FPDmsHv6cUt6XuWVI3EjLR2YVmDq0rC+q9QlykuWXY+BvHJ4smkx487AHQ==', CAST(N'2020-07-17T22:25:06.0026121' AS DateTime2), N'SharedSecret', CAST(N'2019-07-17T19:25:06.3078730' AS DateTime2), 1)
 GO
 INSERT [dbo].[ClientSecrets] ([Id], [Description], [Value], [Expiration], [Type], [Created], [ClientId]) VALUES (6, N'Client 1 description', N'tX/t1EnFYxtitAfOQkAoBabVpv/kAVUTZ/+rerNmcpIqtPo+vQDbBOh6+tt57S83imSLDifAObQq2W1KGuho+0J1pI5F6Uel+qEWagZ5mXnPc+9P22RraXtGFOSSkOr/Ev+YBEih8qAc5ROFqc6tsD/zeqb4GCDeCTsT/9RjE2m2FlgH4ZQxLoFPM/VQ5r+smGSknxZEB/neuvsNjfPLuNKqzpJ2ps6qwkwlqeUqjiN7ZmZwv3RTcg9eKCeZJKCNg3ojpRgsNfKV+dzJHl0UtCzYkSeMW/leV1uDGH2nEZ6rlyZqBugKTzF028aXiVOySXT7wZN5ASiAxU68qR117Q==', CAST(N'2020-07-17T22:25:06.4022280' AS DateTime2), N'SharedSecret', CAST(N'2019-07-17T19:25:06.4034719' AS DateTime2), 18)
 GO
