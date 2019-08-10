@@ -9,6 +9,13 @@ services:
     networks:
       - lionize
 
+  tasks:
+    image: tiksn/lionize-task-management-service
+    ports:
+      - "8083:80"
+    networks:
+      - lionize
+
   web-ui:
     image: ashotnazaryan45/lionize-web-ui:latest
     ports:
