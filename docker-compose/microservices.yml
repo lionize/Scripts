@@ -4,6 +4,8 @@ services:
 
   identity:
     image: tiksn/lionize-identity-management-service
+    ports:
+      - "8081:80"
     networks:
       - lionize
 
