@@ -12,6 +12,15 @@ services:
     networks:
       - lionize
 
+  rabbitmq:
+      image: rabbitmq:management-alpine
+      container_name: rabbitmq
+      ports:
+          - 5672:5672
+          - 15672:15672
+      networks:
+      - lionize
+
 networks:
       lionize:
         driver: bridge
