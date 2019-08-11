@@ -13,6 +13,8 @@ services:
     image: tiksn/lionize-task-management-service
     ports:
       - "8083:80"
+    env_file:
+      - variables.env
     networks:
       - lionize
 
@@ -20,6 +22,8 @@ services:
     image: ashotnazaryan45/lionize-web-ui:latest
     ports:
       - "8080:80"
+    env_file:
+      - variables.env
     networks:
       - lionize
 
