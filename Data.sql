@@ -10,7 +10,7 @@ SET IDENTITY_INSERT [dbo].[AspNetUserClaims] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Clients] ON
 GO
-INSERT [dbo].[Clients] ([Id], [Enabled], [ClientId], [ProtocolType], [RequireClientSecret], [ClientName], [Description], [ClientUri], [LogoUri], [RequireConsent], [AllowRememberConsent], [AlwaysIncludeUserClaimsInIdToken], [RequirePkce], [AllowPlainTextPkce], [AllowAccessTokensViaBrowser], [FrontChannelLogoutUri], [FrontChannelLogoutSessionRequired], [BackChannelLogoutUri], [BackChannelLogoutSessionRequired], [AllowOfflineAccess], [IdentityTokenLifetime], [AccessTokenLifetime], [AuthorizationCodeLifetime], [ConsentLifetime], [AbsoluteRefreshTokenLifetime], [SlidingRefreshTokenLifetime], [RefreshTokenUsage], [UpdateAccessTokenClaimsOnRefresh], [RefreshTokenExpiration], [AccessTokenType], [EnableLocalLogin], [IncludeJwtId], [AlwaysSendClientClaims], [ClientClaimsPrefix], [PairWiseSubjectSalt], [Created], [Updated], [LastAccessed], [UserSsoLifetime], [UserCodeType], [DeviceCodeLifetime], [NonEditable]) VALUES (1, 1, N'UserManagementClient', N'oidc', 1, N'Client 0 Client', NULL, N'http://identityserver.io', NULL, 1, 1, 0, 0, 0, 0, NULL, 1, NULL, 1, 0, 300, 3600, 300, NULL, 2592000, 1296000, 1, 0, 1, 0, 1, 0, 0, N'client_', NULL, CAST(N'2019-07-17T19:25:06.3074530' AS DateTime2), NULL, NULL, NULL, NULL, 300, 0)
+IF NOT EXISTS ( SELECT * FROM [dbo].[Clients] WHERE [Id] = 1) INSERT [dbo].[Clients] ([Id], [Enabled], [ClientId], [ProtocolType], [RequireClientSecret], [ClientName], [Description], [ClientUri], [LogoUri], [RequireConsent], [AllowRememberConsent], [AlwaysIncludeUserClaimsInIdToken], [RequirePkce], [AllowPlainTextPkce], [AllowAccessTokensViaBrowser], [FrontChannelLogoutUri], [FrontChannelLogoutSessionRequired], [BackChannelLogoutUri], [BackChannelLogoutSessionRequired], [AllowOfflineAccess], [IdentityTokenLifetime], [AccessTokenLifetime], [AuthorizationCodeLifetime], [ConsentLifetime], [AbsoluteRefreshTokenLifetime], [SlidingRefreshTokenLifetime], [RefreshTokenUsage], [UpdateAccessTokenClaimsOnRefresh], [RefreshTokenExpiration], [AccessTokenType], [EnableLocalLogin], [IncludeJwtId], [AlwaysSendClientClaims], [ClientClaimsPrefix], [PairWiseSubjectSalt], [Created], [Updated], [LastAccessed], [UserSsoLifetime], [UserCodeType], [DeviceCodeLifetime], [NonEditable]) VALUES (1, 1, N'UserManagementClient', N'oidc', 1, N'Client 0 Client', NULL, N'http://identityserver.io', NULL, 1, 1, 0, 0, 0, 0, NULL, 1, NULL, 1, 0, 300, 3600, 300, NULL, 2592000, 1296000, 1, 0, 1, 0, 1, 0, 0, N'client_', NULL, CAST(N'2019-07-17T19:25:06.3074530' AS DateTime2), NULL, NULL, NULL, NULL, 300, 0)
 GO
 -- INSERT [dbo].[Clients] ([Id], [Enabled], [ClientId], [ProtocolType], [RequireClientSecret], [ClientName], [Description], [ClientUri], [LogoUri], [RequireConsent], [AllowRememberConsent], [AlwaysIncludeUserClaimsInIdToken], [RequirePkce], [AllowPlainTextPkce], [AllowAccessTokensViaBrowser], [FrontChannelLogoutUri], [FrontChannelLogoutSessionRequired], [BackChannelLogoutUri], [BackChannelLogoutSessionRequired], [AllowOfflineAccess], [IdentityTokenLifetime], [AccessTokenLifetime], [AuthorizationCodeLifetime], [ConsentLifetime], [AbsoluteRefreshTokenLifetime], [SlidingRefreshTokenLifetime], [RefreshTokenUsage], [UpdateAccessTokenClaimsOnRefresh], [RefreshTokenExpiration], [AccessTokenType], [EnableLocalLogin], [IncludeJwtId], [AlwaysSendClientClaims], [ClientClaimsPrefix], [PairWiseSubjectSalt], [Created], [Updated], [LastAccessed], [UserSsoLifetime], [UserCodeType], [DeviceCodeLifetime], [NonEditable]) VALUES (2, 1, N'TaskManagementServiceClient', N'oidc', 1, N'Client 17 Client', NULL, N'http://identityserver.io', NULL, 1, 1, 0, 0, 0, 0, NULL, 1, NULL, 1, 0, 300, 3600, 300, NULL, 2592000, 1296000, 1, 0, 1, 0, 1, 0, 0, N'client_', NULL, CAST(N'2019-07-17T19:25:06.4198847' AS DateTime2), NULL, NULL, NULL, NULL, 300, 0)
 -- GO
@@ -54,46 +54,46 @@ SET IDENTITY_INSERT [dbo].[Clients] OFF
 GO
 SET IDENTITY_INSERT [dbo].[ClientGrantTypes] ON
 GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (1, N'password', 1)
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientGrantTypes] WHERE [Id] = 1) INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (1, N'password', 1)
 GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (2, N'client_credentials', 9)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (3, N'client_credentials', 11)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (4, N'password', 8)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (5, N'password', 12)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (6, N'client_credentials', 13)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (7, N'client_credentials', 7)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (8, N'password', 14)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (9, N'password', 20)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (10, N'client_credentials', 19)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (11, N'password', 10)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (12, N'client_credentials', 15)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (13, N'client_credentials', 5)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (14, N'password', 16)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (15, N'password', 4)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (16, N'password', 6)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (17, N'client_credentials', 17)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (18, N'password', 18)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (19, N'password', 2)
-GO
-INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (20, N'client_credentials', 3)
-GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (2, N'client_credentials', 9)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (3, N'client_credentials', 11)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (4, N'password', 8)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (5, N'password', 12)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (6, N'client_credentials', 13)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (7, N'client_credentials', 7)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (8, N'password', 14)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (9, N'password', 20)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (10, N'client_credentials', 19)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (11, N'password', 10)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (12, N'client_credentials', 15)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (13, N'client_credentials', 5)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (14, N'password', 16)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (15, N'password', 4)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (16, N'password', 6)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (17, N'client_credentials', 17)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (18, N'password', 18)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (19, N'password', 2)
+-- GO
+-- INSERT [dbo].[ClientGrantTypes] ([Id], [GrantType], [ClientId]) VALUES (20, N'client_credentials', 3)
+-- GO
 SET IDENTITY_INSERT [dbo].[ClientGrantTypes] OFF
 GO
 SET IDENTITY_INSERT [dbo].[ClientScopes] ON
