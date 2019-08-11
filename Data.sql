@@ -98,205 +98,205 @@ SET IDENTITY_INSERT [dbo].[ClientGrantTypes] OFF
 GO
 SET IDENTITY_INSERT [dbo].[ClientScopes] ON
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (1, N'openid', 4)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (1, N'openid', 4)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (2, N'api2.read_only', 8)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (2, N'api2.read_only', 8)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (3, N'api1', 8)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (3, N'api1', 8)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (4, N'email', 8)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (4, N'email', 8)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (5, N'profile', 8)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (5, N'profile', 8)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (6, N'openid', 8)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (6, N'openid', 8)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (7, N'api1', 3)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (7, N'api1', 3)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (8, N'api2.read_only', 3)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (8, N'api2.read_only', 3)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (9, N'profile', 19)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (9, N'profile', 19)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (10, N'api2.read_only', 9)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (10, N'api2.read_only', 9)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (11, N'api1', 9)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (11, N'api1', 9)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (12, N'email', 9)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (12, N'email', 9)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (13, N'profile', 9)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (13, N'profile', 9)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (14, N'email', 2)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (14, N'email', 2)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (15, N'openid', 9)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (15, N'openid', 9)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (16, N'api2.read_only', 20)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (16, N'api2.read_only', 20)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (17, N'api2.read_only', 10)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (17, N'api2.read_only', 10)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (18, N'api1', 10)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (18, N'api1', 10)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (19, N'email', 10)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (19, N'email', 10)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (20, N'openid', 19)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (20, N'openid', 19)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (21, N'email', 3)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (21, N'email', 3)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (22, N'openid', 7)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (22, N'openid', 7)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (23, N'profile', 4)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (23, N'profile', 4)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (24, N'api2.read_only', 2)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (24, N'api2.read_only', 2)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (25, N'api2.read_only', 5)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (25, N'api2.read_only', 5)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (26, N'api1', 5)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (26, N'api1', 5)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (27, N'email', 4)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (27, N'email', 4)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (28, N'email', 5)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (28, N'email', 5)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (29, N'profile', 5)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (29, N'profile', 5)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (30, N'openid', 5)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (30, N'openid', 5)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (31, N'api1', 4)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (31, N'api1', 4)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (32, N'api2.read_only', 6)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (32, N'api2.read_only', 6)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (33, N'profile', 3)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (33, N'profile', 3)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (34, N'api1', 6)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (34, N'api1', 6)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (35, N'email', 6)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (35, N'email', 6)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (36, N'profile', 6)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (36, N'profile', 6)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (37, N'openid', 6)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (37, N'openid', 6)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (38, N'api1', 2)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (38, N'api1', 2)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (39, N'openid', 3)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (39, N'openid', 3)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (40, N'api2.read_only', 7)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (40, N'api2.read_only', 7)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (41, N'api1', 7)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (41, N'api1', 7)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (42, N'email', 7)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (42, N'email', 7)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (43, N'profile', 7)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (43, N'profile', 7)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (44, N'api2.read_only', 4)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (44, N'api2.read_only', 4)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (45, N'profile', 10)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (45, N'profile', 10)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (46, N'api1', 11)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (46, N'api1', 11)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (47, N'email', 19)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (47, N'email', 19)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (48, N'openid', 20)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (48, N'openid', 20)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (49, N'api2.read_only', 16)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (49, N'api2.read_only', 16)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (50, N'api1', 16)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (50, N'api1', 16)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (51, N'email', 16)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (51, N'email', 16)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (52, N'profile', 16)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (52, N'profile', 16)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (53, N'openid', 16)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (53, N'openid', 16)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (54, N'profile', 20)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (54, N'profile', 20)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (55, N'api2.read_only', 17)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (55, N'api2.read_only', 17)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (56, N'api1', 17)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (56, N'api1', 17)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (57, N'email', 17)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (57, N'email', 17)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (58, N'profile', 17)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (58, N'profile', 17)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (59, N'openid', 15)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (59, N'openid', 15)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (60, N'openid', 17)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (60, N'openid', 17)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (61, N'api2.read_only', 18)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (61, N'api2.read_only', 18)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (62, N'api1', 18)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (62, N'api1', 18)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (63, N'email', 18)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (63, N'email', 18)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (64, N'profile', 18)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (64, N'profile', 18)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (65, N'openid', 18)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (65, N'openid', 18)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (66, N'api1', 20)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (66, N'api1', 20)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (67, N'api2.read_only', 1)
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 67) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (67, N'api2.read_only', 1)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (68, N'api1', 1)
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 68) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (68, N'api1', 1)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (69, N'email', 1)
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 69) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (69, N'email', 1)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (70, N'profile', 1)
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 70) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (70, N'profile', 1)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (71, N'openid', 1)
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 71) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (71, N'openid', 1)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (72, N'email', 20)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (72, N'email', 20)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (73, N'openid', 10)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (73, N'openid', 10)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (74, N'profile', 15)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (74, N'profile', 15)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (75, N'api1', 15)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (75, N'api1', 15)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (76, N'api2.read_only', 11)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (76, N'api2.read_only', 11)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (77, N'openid', 2)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (77, N'openid', 2)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (78, N'email', 11)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (78, N'email', 11)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (79, N'profile', 11)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (79, N'profile', 11)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (80, N'openid', 11)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (80, N'openid', 11)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (81, N'api1', 19)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (81, N'api1', 19)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (82, N'api2.read_only', 12)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (82, N'api2.read_only', 12)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (83, N'api1', 12)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (83, N'api1', 12)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (84, N'email', 12)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (84, N'email', 12)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (85, N'profile', 12)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (85, N'profile', 12)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (86, N'openid', 12)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (86, N'openid', 12)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (87, N'api2.read_only', 19)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (87, N'api2.read_only', 19)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (88, N'api2.read_only', 13)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (88, N'api2.read_only', 13)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (89, N'api1', 13)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (89, N'api1', 13)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (90, N'email', 13)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (90, N'email', 13)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (91, N'profile', 13)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (91, N'profile', 13)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (92, N'openid', 13)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (92, N'openid', 13)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (93, N'api2.read_only', 14)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (93, N'api2.read_only', 14)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (94, N'api1', 14)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (94, N'api1', 14)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (95, N'email', 14)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (95, N'email', 14)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (96, N'profile', 14)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (96, N'profile', 14)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (97, N'openid', 14)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (97, N'openid', 14)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (98, N'api2.read_only', 15)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (98, N'api2.read_only', 15)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (99, N'email', 15)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (99, N'email', 15)
 GO
-INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (100, N'profile', 2)
+-- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (100, N'profile', 2)
 GO
 SET IDENTITY_INSERT [dbo].[ClientScopes] OFF
 GO
