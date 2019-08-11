@@ -1,6 +1,6 @@
 Install-Module -Name psake
 Install-Module -Name PsHosts
-Install-Module -Name dbatools
+Install-Module -Name SqlServer
 
 dotnet tool install --global smite-cli
 dotnet tool update --global smite-cli
