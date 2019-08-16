@@ -6,6 +6,8 @@ services:
     image: tiksn/lionize-identity-management-service
     ports:
       - "8081:80"
+    env_file:
+      - variables.env
     networks:
       - lionize
 
@@ -22,8 +24,6 @@ services:
     image: ashotnazaryan45/lionize-web-ui:latest
     ports:
       - "8080:80"
-    env_file:
-      - variables.env
     networks:
       - lionize
 
