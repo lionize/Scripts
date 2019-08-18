@@ -2,6 +2,10 @@ Properties {
     #
 }
 
+Task Status {
+    Exec { docker-compose -f (Resolve-Path "docker-compose/dependencies.yml").Path -f (Resolve-Path "docker-compose/microservices.yml").Path ps }
+}
+
 Task Pull {
     Exec { docker-compose -f (Resolve-Path "docker-compose/dependencies.yml").Path -f (Resolve-Path "docker-compose/microservices.yml").Path pull }
 }
