@@ -20,6 +20,7 @@ if ($IsWindows) {
     choco install kubernetes-cli
 
     Add-HostEntry -Name mssql -Loopback -Force
+    Add-HostEntry -Name mongo -Loopback -Force
 }
 elseif ($IsFedora) {
     sudo dnf -y install docker-compose
