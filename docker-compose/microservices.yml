@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   identity:
-    image: tiksn/lionize-identity-management-service
+    image: tiksn/lionize-identity-management-service:latest
     ports:
       - "8081:80"
     env_file:
@@ -12,9 +12,18 @@ services:
       - lionize
 
   tasks:
-    image: tiksn/lionize-task-management-service
+    image: tiksn/lionize-task-management-service:latest
     ports:
       - "8083:80"
+    env_file:
+      - variables.env
+    networks:
+      - lionize
+
+  habitica:
+    image: tiksn/lionize-habitica-task-provider-service:latest
+    ports:
+      - "8085:80"
     env_file:
       - variables.env
     networks:
