@@ -2,6 +2,14 @@ Properties {
     #
 }
 
+Task Teardown {
+    Exec { docker-compose -f (Resolve-Path "docker-compose/dependencies.yml").Path -f (Resolve-Path "docker-compose/microservices.yml").Path down }
+}
+
+Task Stop {
+    Exec { docker-compose -f (Resolve-Path "docker-compose/dependencies.yml").Path -f (Resolve-Path "docker-compose/microservices.yml").Path stop }
+}
+
 Task Status {
     Exec { docker-compose -f (Resolve-Path "docker-compose/dependencies.yml").Path -f (Resolve-Path "docker-compose/microservices.yml").Path ps }
 }
