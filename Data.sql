@@ -226,15 +226,11 @@ GO
 GO
 -- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (66, N'api1', 20)
 GO
-IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 67) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (67, N'api2.read_only', 1)
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 1) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (1, N'email', 1)
 GO
-IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 68) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (68, N'api1', 1)
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 2) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (2, N'profile', 1)
 GO
-IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 69) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (69, N'email', 1)
-GO
-IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 70) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (70, N'profile', 1)
-GO
-IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 71) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (71, N'openid', 1)
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 3) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (3, N'openid', 1)
 GO
 -- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (72, N'email', 20)
 GO
