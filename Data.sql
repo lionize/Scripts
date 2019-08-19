@@ -226,11 +226,9 @@ GO
 GO
 -- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (66, N'api1', 20)
 GO
-IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 1) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (1, N'email', 1)
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 1) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (1, N'profile', 1)
 GO
-IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 2) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (2, N'profile', 1)
-GO
-IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 3) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (3, N'openid', 1)
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 2) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (2, N'openid', 1)
 GO
 -- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (72, N'email', 20)
 GO
@@ -297,4 +295,46 @@ GO
 IF NOT EXISTS ( SELECT * FROM [dbo].[ClientSecrets] WHERE [Id] = 1) INSERT [dbo].[ClientSecrets] ([Id], [Description], [Value], [Expiration], [Type], [Created], [ClientId]) VALUES (1, N'User Management Client', N'UD6fn+ADIk5ieMKjcIBT75XFgaM4mxw7tQK+YXL6hc4=', CAST(N'2020-07-17T22:25:06.0026121' AS DateTime2), N'SharedSecret', CAST(N'2019-07-17T19:25:06.3078730' AS DateTime2), 1)
 GO
 SET IDENTITY_INSERT [dbo].[ClientSecrets] OFF
+GO
+SET IDENTITY_INSERT [dbo].[IdentityResources] ON
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityResources] WHERE [Id] = 1) INSERT [dbo].[IdentityResources] ([Id], [Created], [Description], [DisplayName], [Emphasize], [Enabled], [Name], [NonEditable], [Required], [ShowInDiscoveryDocument]) VALUES (1, GETDATE(), NULL, N'Your user identifier', 0, 1, N'openid', 1, 1, 1)
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityResources] WHERE [Id] = 2) INSERT [dbo].[IdentityResources] ([Id], [Created], [Description], [DisplayName], [Emphasize], [Enabled], [Name], [NonEditable], [Required], [ShowInDiscoveryDocument]) VALUES (2, GETDATE(), N'Your user profile information (first name, last name, etc.)', N'User profile', 1, 1, N'profile', 1, 0, 1)
+GO
+SET IDENTITY_INSERT [dbo].[IdentityResources] OFF
+GO
+SET IDENTITY_INSERT [dbo].[IdentityClaims] ON
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 1) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (1, 1, N'sub')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 2) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (2, 2, N'name')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 3) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (3, 2, N'family_name')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 4) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (4, 2, N'given_name')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 5) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (5, 2, N'middle_name')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 6) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (6, 2, N'nickname')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 7) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (7, 2, N'preferred_username')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 8) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (8, 2, N'profile')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 9) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (9, 2, N'picture')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 10) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (10, 2, N'website')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 11) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (11, 2, N'gender')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 12) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (12, 2, N'birthdate')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 13) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (13, 2, N'zoneinfo')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 14) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (14, 2, N'locale')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[IdentityClaims] WHERE [Id] = 15) INSERT [dbo].[IdentityClaims] ([Id], [IdentityResourceId], [Type]) VALUES (15, 2, N'updated_at')
+GO
+SET IDENTITY_INSERT [dbo].[IdentityClaims] OFF
 GO
