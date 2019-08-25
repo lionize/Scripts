@@ -36,6 +36,7 @@ services:
     env_file:
       - variables.env
     environment:
+      - ConnectionStrings__Redis=redis:6379,password=UmimfRKpdTj1VJjK
       - ApiResource__ApiName=habitica-api
       - ApiResource__ApiSecret=43xoIIj2QFyvFNevScaPvOFUWNQa4unVwT75TOlG5cmwFyAwcI+BFW4mpkeN52jXSAHbUya58gCTkl5K/PNyaQ==
     networks:
