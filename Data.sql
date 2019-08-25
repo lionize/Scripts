@@ -318,5 +318,15 @@ IF NOT EXISTS ( SELECT * FROM [dbo].[ApiSecrets] WHERE [Id] = 2) INSERT [dbo].[A
 GO
 IF NOT EXISTS ( SELECT * FROM [dbo].[ApiSecrets] WHERE [Id] = 3) INSERT [dbo].[ApiSecrets] ([Id], [ApiResourceId], [Description], [Created], [Expiration], [Type], [Value]) VALUES (3, 3, NULL, GETDATE(), NULL, N'SharedSecret', N'26O1szHj4CXM1nc/5Pi/K/l7AT751uN9/24QGNiZb70=')
 GO
-SET IDENTITY_INSERT [dbo].[ApiSecrets] ON
+SET IDENTITY_INSERT [dbo].[ApiSecrets] OFF
+GO
+SET IDENTITY_INSERT [dbo].[ApiScopes] ON
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[ApiScopes] WHERE [Id] = 1) INSERT [dbo].[ApiScopes] ([Id], [ApiResourceId], [Description], [DisplayName], [Emphasize], [Name], [Required], [ShowInDiscoveryDocument]) VALUES (1, 1, N'Identity Management Service Default Scope', N'Identity Management Service Default Scope', 0, N'identity-management', 0, 1)
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[ApiScopes] WHERE [Id] = 2) INSERT [dbo].[ApiScopes] ([Id], [ApiResourceId], [Description], [DisplayName], [Emphasize], [Name], [Required], [ShowInDiscoveryDocument]) VALUES (2, 2, N'Task Management Service Default Scope', N'Task Management Service Default Scope', 0, N'task-management', 0, 1)
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[ApiScopes] WHERE [Id] = 3) INSERT [dbo].[ApiScopes] ([Id], [ApiResourceId], [Description], [DisplayName], [Emphasize], [Name], [Required], [ShowInDiscoveryDocument]) VALUES (3, 3, N'Habitica Task Provider Service Default Scope', N'Habitica Task Provider Service Default Scope', 0, N'habitica-provider', 0, 1)
+GO
+SET IDENTITY_INSERT [dbo].[ApiScopes] OFF
 GO
