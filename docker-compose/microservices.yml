@@ -9,6 +9,9 @@ services:
     env_file:
       - variables.env
     environment:
+      - ConnectionStrings__Users="Server=mssql;Database=IdentityManagementService;User Id=sa;Password=z0aiDwJ0205q37Nr;"
+      - ConnectionStrings__Configuration="Server=mssql;Database=IdentityManagementService;User Id=sa;Password=z0aiDwJ0205q37Nr;"
+      - ConnectionStrings__Operational="Server=mssql;Database=IdentityManagementService;User Id=sa;Password=z0aiDwJ0205q37Nr;"
       - ApiResource__ApiName=identity-api
     networks:
       - lionize
