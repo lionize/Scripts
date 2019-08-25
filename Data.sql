@@ -310,3 +310,13 @@ IF NOT EXISTS ( SELECT * FROM [dbo].[ApiResources] WHERE [Id] = 3) INSERT [dbo].
 GO
 SET IDENTITY_INSERT [dbo].[ApiResources] OFF
 GO
+SET IDENTITY_INSERT [dbo].[ApiSecrets] ON
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[ApiSecrets] WHERE [Id] = 1) INSERT [dbo].[ApiSecrets] ([Id], [ApiResourceId], [Description], [Created], [Expiration], [Type], [Value]) VALUES (1, 1, NULL, GETDATE(), NULL, N'SharedSecret', N'IlM2emwvAOUundGVXqrYSbgWsSgBdFiUBEFNm+zkZLw=')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[ApiSecrets] WHERE [Id] = 2) INSERT [dbo].[ApiSecrets] ([Id], [ApiResourceId], [Description], [Created], [Expiration], [Type], [Value]) VALUES (2, 2, NULL, GETDATE(), NULL, N'SharedSecret', N'SwU06eRABG2C0MK+UuJGdLL064+6wIvtojzDZX+aE7o=')
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[ApiSecrets] WHERE [Id] = 3) INSERT [dbo].[ApiSecrets] ([Id], [ApiResourceId], [Description], [Created], [Expiration], [Type], [Value]) VALUES (3, 3, NULL, GETDATE(), NULL, N'SharedSecret', N'26O1szHj4CXM1nc/5Pi/K/l7AT751uN9/24QGNiZb70=')
+GO
+SET IDENTITY_INSERT [dbo].[ApiSecrets] ON
+GO
