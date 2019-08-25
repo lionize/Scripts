@@ -192,6 +192,12 @@ IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 1) INSERT [dbo].
 GO
 IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 2) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (2, N'openid', 1)
 GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 3) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (3, N'identity-management', 1)
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 4) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (4, N'task-management', 1)
+GO
+IF NOT EXISTS ( SELECT * FROM [dbo].[ClientScopes] WHERE [Id] = 5) INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (5, N'habitica-provider', 1)
+GO
 -- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (72, N'email', 20)
 GO
 -- INSERT [dbo].[ClientScopes] ([Id], [Scope], [ClientId]) VALUES (73, N'openid', 10)
