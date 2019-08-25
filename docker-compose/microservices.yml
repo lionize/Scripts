@@ -13,6 +13,7 @@ services:
       - ConnectionStrings__Configuration="Server=mssql;Database=IdentityManagementService;User Id=sa;Password=z0aiDwJ0205q37Nr;"
       - ConnectionStrings__Operational="Server=mssql;Database=IdentityManagementService;User Id=sa;Password=z0aiDwJ0205q37Nr;"
       - ApiResource__ApiName=identity-api
+      - ApiResource__ApiSecret="Iu+LZ8RCoUcrv6XNFcg+eEyHPBYeeLyBfmkex++Apqvn/dnrSsZx1r/rw7gvJAY7s4V7Lleh9qozCehaI9pYqg=="
     networks:
       - lionize
 
@@ -24,6 +25,7 @@ services:
       - variables.env
     environment:
       - ApiResource__ApiName=task-api
+      - ApiResource__ApiSecret="B01SeaEDdDBGDLeqUCHuPSUhuSXsa8VEsvvEp6bfb804hLcVZ1bcJkZDB/crtsSG2xzzgiRxjZuHDsalPs2JZg=="
     networks:
       - lionize
 
@@ -35,6 +37,7 @@ services:
       - variables.env
     environment:
       - ApiResource__ApiName=habitica-api
+      - ApiResource__ApiSecret="43xoIIj2QFyvFNevScaPvOFUWNQa4unVwT75TOlG5cmwFyAwcI+BFW4mpkeN52jXSAHbUya58gCTkl5K/PNyaQ=="
     networks:
       - lionize
 
