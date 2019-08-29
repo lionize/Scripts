@@ -310,7 +310,7 @@ SET IDENTITY_INSERT [dbo].[ApiResources] ON
 GO
 IF NOT EXISTS ( SELECT * FROM [dbo].[ApiResources] WHERE [Id] = 1) INSERT [dbo].[ApiResources] ([Id], [Created], [Description], [DisplayName], [Enabled], [Name], [NonEditable]) VALUES (1, GETDATE(), N'Identity Management Service', N'Identity Management Service API', 1, N'identity-api', 1)
 GO
-IF NOT EXISTS ( SELECT * FROM [dbo].[ApiResources] WHERE [Id] = 2) INSERT [dbo].[ApiResources] ([Id], [Created], [Description], [DisplayName], [Enabled], [Name], [NonEditable]) VALUES (2, GETDATE(), N'Task Management Service', N'Identity Management Service API', 1, N'task-api', 1)
+IF NOT EXISTS ( SELECT * FROM [dbo].[ApiResources] WHERE [Id] = 2) INSERT [dbo].[ApiResources] ([Id], [Created], [Description], [DisplayName], [Enabled], [Name], [NonEditable]) VALUES (2, GETDATE(), N'Task Management Service', N'Task Management Service API', 1, N'task-api', 1)
 GO
 IF NOT EXISTS ( SELECT * FROM [dbo].[ApiResources] WHERE [Id] = 3) INSERT [dbo].[ApiResources] ([Id], [Created], [Description], [DisplayName], [Enabled], [Name], [NonEditable]) VALUES (3, GETDATE(), N'Habitica Task Provider Service', N'Habitica Task Provider Service API', 1, N'habitica-api', 1)
 GO
@@ -318,11 +318,11 @@ SET IDENTITY_INSERT [dbo].[ApiResources] OFF
 GO
 SET IDENTITY_INSERT [dbo].[ApiSecrets] ON
 GO
-IF NOT EXISTS ( SELECT * FROM [dbo].[ApiSecrets] WHERE [Id] = 1) INSERT [dbo].[ApiSecrets] ([Id], [ApiResourceId], [Description], [Created], [Expiration], [Type], [Value]) VALUES (1, 1, NULL, GETDATE(), NULL, N'SharedSecret', N'IlM2emwvAOUundGVXqrYSbgWsSgBdFiUBEFNm+zkZLw=')
+IF NOT EXISTS ( SELECT * FROM [dbo].[ApiSecrets] WHERE [Id] = 1) INSERT [dbo].[ApiSecrets] ([Id], [ApiResourceId], [Description], [Created], [Expiration], [Type], [Value]) VALUES (1, 1, NULL, GETDATE(), '2058-06-23 07:30:20', N'SharedSecret', N'IlM2emwvAOUundGVXqrYSbgWsSgBdFiUBEFNm+zkZLw=')
 GO
-IF NOT EXISTS ( SELECT * FROM [dbo].[ApiSecrets] WHERE [Id] = 2) INSERT [dbo].[ApiSecrets] ([Id], [ApiResourceId], [Description], [Created], [Expiration], [Type], [Value]) VALUES (2, 2, NULL, GETDATE(), NULL, N'SharedSecret', N'SwU06eRABG2C0MK+UuJGdLL064+6wIvtojzDZX+aE7o=')
+IF NOT EXISTS ( SELECT * FROM [dbo].[ApiSecrets] WHERE [Id] = 2) INSERT [dbo].[ApiSecrets] ([Id], [ApiResourceId], [Description], [Created], [Expiration], [Type], [Value]) VALUES (2, 2, NULL, GETDATE(), '2058-06-23 07:30:20', N'SharedSecret', N'SwU06eRABG2C0MK+UuJGdLL064+6wIvtojzDZX+aE7o=')
 GO
-IF NOT EXISTS ( SELECT * FROM [dbo].[ApiSecrets] WHERE [Id] = 3) INSERT [dbo].[ApiSecrets] ([Id], [ApiResourceId], [Description], [Created], [Expiration], [Type], [Value]) VALUES (3, 3, NULL, GETDATE(), NULL, N'SharedSecret', N'26O1szHj4CXM1nc/5Pi/K/l7AT751uN9/24QGNiZb70=')
+IF NOT EXISTS ( SELECT * FROM [dbo].[ApiSecrets] WHERE [Id] = 3) INSERT [dbo].[ApiSecrets] ([Id], [ApiResourceId], [Description], [Created], [Expiration], [Type], [Value]) VALUES (3, 3, NULL, GETDATE(), '2058-06-23 07:30:20', N'SharedSecret', N'26O1szHj4CXM1nc/5Pi/K/l7AT751uN9/24QGNiZb70=')
 GO
 SET IDENTITY_INSERT [dbo].[ApiSecrets] OFF
 GO
