@@ -4,6 +4,8 @@ services:
 
   identity:
     image: tiksn/lionize-identity-management-service:latest
+    hostname: identity
+    domainname: identity
     ports:
       - "8081:80"
     env_file:
@@ -19,6 +21,8 @@ services:
 
   tasks:
     image: tiksn/lionize-task-management-service:latest
+    hostname: tasks
+    domainname: tasks
     ports:
       - "8083:80"
     env_file:
@@ -31,12 +35,15 @@ services:
 
   habitica:
     image: tiksn/lionize-habitica-task-provider-service:latest
+    hostname: habitica
+    domainname: habitica
     ports:
       - "8085:80"
     env_file:
       - variables.env
     environment:
       - ConnectionStrings__Redis=redis:6379,password=UmimfRKpdTj1VJjK
+      - ConnectionStrings__Mongo=mongodb://root:Xq5xrtzEKj44ueyd@mongo:27017/HabiticaTaskProviderService?authSource=admin
       - ApiResource__ApiName=habitica-api
       - ApiResource__ApiSecret=43xoIIj2QFyvFNevScaPvOFUWNQa4unVwT75TOlG5cmwFyAwcI+BFW4mpkeN52jXSAHbUya58gCTkl5K/PNyaQ==
     networks:
