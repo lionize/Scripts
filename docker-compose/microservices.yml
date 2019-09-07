@@ -30,6 +30,8 @@ services:
     environment:
       - ApiResource__ApiName=task-api
       - ApiResource__ApiSecret=B01SeaEDdDBGDLeqUCHuPSUhuSXsa8VEsvvEp6bfb804hLcVZ1bcJkZDB/crtsSG2xzzgiRxjZuHDsalPs2JZg==
+      - Account__ClientId=UserManagementClient
+      - Account__ClientSecret=G4QJrKZSRQ4PO6yDX/WxY7OxZbGol7hPO7u/hv1kt1cRwn34+wOHJ26jL+kBRk9mmSIXn98HMoTLunHrkr4Qqw==
     networks:
       - lionize
 
