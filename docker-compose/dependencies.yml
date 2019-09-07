@@ -44,4 +44,5 @@ services:
 
 networks:
       lionize:
+        name: lionize
         driver: bridge
