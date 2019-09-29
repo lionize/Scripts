@@ -14,6 +14,8 @@ services:
 
   mongo:
     image: mongo:latest
+    hostname: mongo
+    domainname: mongo
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=Xq5xrtzEKj44ueyd
@@ -31,17 +33,17 @@ services:
       - lionize
 
   rabbitmq:
-      image: rabbitmq:management-alpine
-      hostname: rabbitmq
-      domainname: rabbitmq
-      environment:
-            RABBITMQ_DEFAULT_USER: rabbit
-            RABBITMQ_DEFAULT_PASS: EvtNt7PKZqNNT06T
-      ports:
-          - 5672:5672
-          - 15672:15672
-      networks:
-      - lionize
+    image: rabbitmq:management-alpine
+    hostname: rabbitmq
+    domainname: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbit
+      - RABBITMQ_DEFAULT_PASS=EvtNt7PKZqNNT06T
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+    - lionize
 
 networks:
       lionize:
