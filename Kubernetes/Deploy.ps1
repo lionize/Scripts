@@ -3,4 +3,4 @@ param(
 	[string]$EnvironmentName
 )
 
-Invoke-psake -buildFile ./DeploymentTasks.ps1 -taskList Deploy -parameters @{ EnvironmentName = $EnvironmentName }
+Invoke-psake -buildFile ./DeploymentTasks.ps1 -taskList DeployToEnvironment -parameters @{ EnvironmentName = $EnvironmentName }
