@@ -6,4 +6,6 @@ Task DeployConfigMap
 
 Task DeployDependencies -depends SelectEnvironment
 
-Task SelectEnvironment
+Task SelectEnvironment {
+    Exec { kubectl config set-context $EnvironmentName }
+}
