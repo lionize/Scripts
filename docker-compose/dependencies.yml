@@ -12,6 +12,17 @@ services:
     networks:
       - lionize
 
+  postgres:
+    image: postgres:latest
+    hostname: postgres
+    domainname: postgres
+    environment:
+      POSTGRES_PASSWORD: IYmv5OcqEoANcO7s
+    ports:
+      - 5432:5432
+    networks:
+      - lionize
+
   mongo:
     image: mongo:latest
     hostname: mongo
