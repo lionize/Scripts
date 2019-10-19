@@ -2,16 +2,6 @@ version: '3.7'
 
 services:
 
-  mssql:
-    image: mcr.microsoft.com/mssql/server:latest
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=z0aiDwJ0205q37Nr
-    ports:
-      - "1433:1433"
-    networks:
-      - lionize
-
   postgres:
     image: postgres:latest
     hostname: postgres
