@@ -20,7 +20,7 @@ if ($IsLinux) {
 if ($IsWindows) {
     choco install kubernetes-cli
 
-    Add-HostEntry -Name mssql -Loopback -Force
+    Add-HostEntry -Name postgres -Loopback -Force
     Add-HostEntry -Name mongo -Loopback -Force
 }
 elseif ($IsFedora) {
