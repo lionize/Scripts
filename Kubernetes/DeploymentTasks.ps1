@@ -1,4 +1,6 @@
 Properties {
+    Import-Module -Name PSKubectl
+
     $config = Get-KubeConfig
     $envCount = $config.Contexts.Where({$_.Name -eq $EnvironmentName}).Count
 
