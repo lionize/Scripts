@@ -31,10 +31,14 @@ Task ApplyScript -depends Run {
     try {
         Open-PostGreConnection -ConnectionString $connectionString 
         
-        $sqlFilePath = (Resolve-Path "./Data.sql").Path
-        $query = Get-Content -Path $sqlFilePath;
-        Invoke-SqlUpdate -Query $query
-        Close-SqlConnection
+        try {
+            $sqlFilePath = (Resolve-Path "./Data.sql").Path
+            $query = Get-Content -Path $sqlFilePath;
+            Invoke-SqlUpdate -Query $query
+        }
+        finally {
+            Close-SqlConnection    
+        }
     }
     catch {
         throw
