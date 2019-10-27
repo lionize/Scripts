@@ -44,7 +44,19 @@ services:
       - 5672:5672
       - 15672:15672
     networks:
-    - lionize
+      - lionize
+
+  seq:
+    image: datalust/seq:latest
+    hostname: seq
+    domainname: seq
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - 80:80
+      - 5341:5341
+    networks:
+      - lionize
 
 networks:
       lionize:
