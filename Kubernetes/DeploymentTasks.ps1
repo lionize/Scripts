@@ -21,7 +21,10 @@ Task DeployRabbitMQ -depends SelectNamespace
 
 Task DeployPostgres -depends SelectNamespace
 
-Task DeployRedis -depends SelectNamespace
+Task DeployRedis -depends SelectNamespace {
+    Exec { kubectl apply -f ./redis-deployment.yml --namespace $Script:NamespaceName }
+    Exec { kubectl apply -f ./redis-service.yml --namespace $Script:NamespaceName }
+}
 
 Task DeployMongoDB -depends SelectNamespace {
     Exec { kubectl apply -f ./mongo-service.yml --namespace $Script:NamespaceName }
