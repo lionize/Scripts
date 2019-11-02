@@ -7,11 +7,21 @@ Properties {
     Assert ( $envCount -gt 0 ) "Environment '$EnvironmentName' is not configured yet."
 }
 
-Task DeployToEnvironment -depends DeployMicroservices
+Task DeployToEnvironment -depends DeployIdentityManagementService, DeployTaskManagementService, DeployHabiticaTaskProviderService
 
-Task DeployMicroservices -depends DeployMongoDB, DeployConfigMap
+Task DeployIdentityManagementService -depends DeployRabbitMQ, DeployPostgres, DeployMicroserviceConfigMap
 
-Task DeployConfigMap
+Task DeployTaskManagementService -depends DeployRabbitMQ, DeployMongoDB, DeployMicroserviceConfigMap
+
+Task DeployHabiticaTaskProviderService -depends DeployRabbitMQ, DeployMongoDB, DeployRedis, DeployMicroserviceConfigMap
+
+Task DeployMicroserviceConfigMap
+
+Task DeployRabbitMQ -depends SelectNamespace
+
+Task DeployPostgres -depends SelectNamespace
+
+Task DeployRedis -depends SelectNamespace
 
 Task DeployMongoDB -depends SelectNamespace {
     Exec { kubectl apply -f ./mongo-service.yml --namespace $Script:NamespaceName }
