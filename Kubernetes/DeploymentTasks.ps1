@@ -13,7 +13,11 @@ Task DeployMicroservices -depends DeployDependencies, DeployConfigMap
 
 Task DeployConfigMap
 
-Task DeployDependencies -depends SelectEnvironment
+Task DeployDependencies -depends CreateNamespaces
+
+Task CreateNamespaces -depends SelectEnvironment {
+    Exec { kubectl apply -f ./Namespaces.yml }
+}
 
 Task SelectEnvironment {
     Exec { kubectl config use-context $EnvironmentName }
