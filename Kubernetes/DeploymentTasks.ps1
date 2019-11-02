@@ -9,11 +9,14 @@ Properties {
 
 Task DeployToEnvironment -depends DeployMicroservices
 
-Task DeployMicroservices -depends DeployDependencies, DeployConfigMap
+Task DeployMicroservices -depends DeployMongoDB, DeployConfigMap
 
 Task DeployConfigMap
 
-Task DeployDependencies -depends SelectNamespace
+Task DeployMongoDB -depends SelectNamespace {
+    Exec { kubectl apply -f ./mongo-service.yml --namespace $Script:NamespaceName }
+    Exec { kubectl apply -f ./mongo-statefulset.yml --namespace $Script:NamespaceName }
+}
 
 Task SelectNamespace -depends CreateNamespaces{
     Import-Module -Name PSKubectl
