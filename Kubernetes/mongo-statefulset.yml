@@ -39,7 +39,7 @@ spec:
      annotations:
        volume.beta.kubernetes.io/storage-class: "standard"
    spec:
-     accessModes: 
+     accessModes:
       - ReadWriteOnce
      storageClassName: "standard"
      resources:
