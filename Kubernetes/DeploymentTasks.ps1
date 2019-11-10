@@ -17,9 +17,13 @@ Task DeployHabiticaTaskProviderService -depends DeployRabbitMQ, DeployMongoDB, D
 
 Task DeployMicroserviceConfigMap
 
-Task DeployRabbitMQ -depends SelectNamespace
+Task DeployRabbitMQ -depends SelectNamespace, InitHelm
 
 Task DeployPostgres -depends SelectNamespace
+
+Task InitHelm {
+    Exec { helm init --history-max 200 }
+}
 
 Task DeployRedis -depends SelectNamespace {
     Exec { kubectl apply -f ./redis-deployment.yml --namespace $Script:NamespaceName }
