@@ -17,7 +17,10 @@ Task DeployHabiticaTaskProviderService -depends DeployRabbitMQ, DeployMongoDB, D
 
 Task DeployMicroserviceConfigMap
 
-Task DeployRabbitMQ -depends SelectNamespace
+Task DeployRabbitMQ -depends SelectNamespace {
+    Exec { kubectl apply -f ./rabbitmq-PVC.yml --namespace $Script:NamespaceName }
+    Exec { kubectl apply -f ./rabbitmq-deployment.yml --namespace $Script:NamespaceName }
+}
 
 Task DeployPostgres -depends SelectNamespace
 
