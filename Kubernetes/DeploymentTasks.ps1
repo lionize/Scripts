@@ -23,10 +23,10 @@ Task DeployRabbitMQ -depends SelectNamespace {
 }
 
 Task DeployPostgres -depends SelectNamespace {
-    Exec { kubectl apply -f ./postgres-configmap.yml }
-    Exec { kubectl apply -f ./postgres-storage.yml }
-    Exec { kubectl apply -f ./postgres-service.yml }
-    Exec { kubectl apply -f ./postgres-deployment.yml }
+    Exec { kubectl apply -f ./postgres-configmap.yml --namespace $Script:NamespaceName }
+    Exec { kubectl apply -f ./postgres-storage.yml --namespace $Script:NamespaceName }
+    Exec { kubectl apply -f ./postgres-service.yml --namespace $Script:NamespaceName }
+    Exec { kubectl apply -f ./postgres-deployment.yml --namespace $Script:NamespaceName }
 }
 
 Task DeployRedis -depends SelectNamespace {
