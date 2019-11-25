@@ -22,7 +22,9 @@ Task DeployRabbitMQ -depends SelectNamespace {
     Exec { kubectl apply -f ./rabbitmq-deployment.yml --namespace $Script:NamespaceName }
 }
 
-Task DeployPostgres -depends SelectNamespace
+Task DeployPostgres -depends SelectNamespace {
+    Exec { kubectl apply -f ./postgres-configmap.yml }
+}
 
 Task DeployRedis -depends SelectNamespace {
     Exec { kubectl apply -f ./redis-deployment.yml --namespace $Script:NamespaceName }
