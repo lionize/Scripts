@@ -24,6 +24,9 @@ Task DeployRabbitMQ -depends SelectNamespace {
 
 Task DeployPostgres -depends SelectNamespace {
     Exec { kubectl apply -f ./postgres-configmap.yml }
+    Exec { kubectl apply -f ./postgres-storage.yml }
+    Exec { kubectl apply -f ./postgres-service.yml }
+    Exec { kubectl apply -f ./postgres-deployment.yml }
 }
 
 Task DeployRedis -depends SelectNamespace {
