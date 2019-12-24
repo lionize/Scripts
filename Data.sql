@@ -15,6 +15,7 @@ IF (SELECT count(*) FROM "ClientScopes" WHERE "Id" = 2) = 0 THEN INSERT INTO "Cl
 IF (SELECT count(*) FROM "ClientScopes" WHERE "Id" = 3) = 0 THEN INSERT INTO "ClientScopes" ("Id", "ClientId", "Scope") OVERRIDING SYSTEM VALUE VALUES (3, 1, N'identity-management'); END IF;
 IF (SELECT count(*) FROM "ClientScopes" WHERE "Id" = 4) = 0 THEN INSERT INTO "ClientScopes" ("Id", "ClientId", "Scope") OVERRIDING SYSTEM VALUE VALUES (4, 1, N'task-management'); END IF;
 IF (SELECT count(*) FROM "ClientScopes" WHERE "Id" = 5) = 0 THEN INSERT INTO "ClientScopes" ("Id", "ClientId", "Scope") OVERRIDING SYSTEM VALUE VALUES (5, 1, N'habitica-provider'); END IF;
+IF (SELECT count(*) FROM "ClientScopes" WHERE "Id" = 6) = 0 THEN INSERT INTO "ClientScopes" ("Id", "ClientId", "Scope") OVERRIDING SYSTEM VALUE VALUES (6, 1, N'settings-service'); END IF;
 
 PERFORM setval('"ClientScopes_Id_seq"', (SELECT MAX("Id") FROM "ClientScopes")+1);
 
@@ -48,18 +49,21 @@ PERFORM setval('"IdentityClaims_Id_seq"', (SELECT MAX("Id") FROM "IdentityClaims
 IF (SELECT count(*) FROM "ApiResources" WHERE "Id" = 1) = 0 THEN INSERT INTO "ApiResources" ("Id", "Created", "Description", "DisplayName", "Enabled", "Name", "NonEditable") OVERRIDING SYSTEM VALUE VALUES (1, current_date, N'Identity Management Service', N'Identity Management Service API', true, N'identity-api', true); END IF;
 IF (SELECT count(*) FROM "ApiResources" WHERE "Id" = 2) = 0 THEN INSERT INTO "ApiResources" ("Id", "Created", "Description", "DisplayName", "Enabled", "Name", "NonEditable") OVERRIDING SYSTEM VALUE VALUES (2, current_date, N'Task Management Service', N'Task Management Service API', true, N'task-api', true); END IF;
 IF (SELECT count(*) FROM "ApiResources" WHERE "Id" = 3) = 0 THEN INSERT INTO "ApiResources" ("Id", "Created", "Description", "DisplayName", "Enabled", "Name", "NonEditable") OVERRIDING SYSTEM VALUE VALUES (3, current_date, N'Habitica Task Provider Service', N'Habitica Task Provider Service API', true, N'habitica-api', true); END IF;
+IF (SELECT count(*) FROM "ApiResources" WHERE "Id" = 4) = 0 THEN INSERT INTO "ApiResources" ("Id", "Created", "Description", "DisplayName", "Enabled", "Name", "NonEditable") OVERRIDING SYSTEM VALUE VALUES (4, current_date, N'Settings Service', N'Settings Service API', true, N'settings-api', true); END IF;
 
 PERFORM setval('"ApiResources_Id_seq"', (SELECT MAX("Id") FROM "ApiResources")+1);
 
 IF (SELECT count(*) FROM "ApiScopes" WHERE "Id" = 1) = 0 THEN INSERT INTO "ApiScopes" ("Id", "ApiResourceId", "Description", "DisplayName", "Emphasize", "Name", "Required", "ShowInDiscoveryDocument") OVERRIDING SYSTEM VALUE VALUES (1, 1, N'Identity Management Service Default Scope', N'Identity Management Service Default Scope', false, N'identity-management', false, true); END IF;
 IF (SELECT count(*) FROM "ApiScopes" WHERE "Id" = 2) = 0 THEN INSERT INTO "ApiScopes" ("Id", "ApiResourceId", "Description", "DisplayName", "Emphasize", "Name", "Required", "ShowInDiscoveryDocument") OVERRIDING SYSTEM VALUE VALUES (2, 2, N'Task Management Service Default Scope', N'Task Management Service Default Scope', false, N'task-management', false, true); END IF;
 IF (SELECT count(*) FROM "ApiScopes" WHERE "Id" = 3) = 0 THEN INSERT INTO "ApiScopes" ("Id", "ApiResourceId", "Description", "DisplayName", "Emphasize", "Name", "Required", "ShowInDiscoveryDocument") OVERRIDING SYSTEM VALUE VALUES (3, 3, N'Habitica Task Provider Service Default Scope', N'Habitica Task Provider Service Default Scope', false, N'habitica-provider', false, true); END IF;
+IF (SELECT count(*) FROM "ApiScopes" WHERE "Id" = 4) = 0 THEN INSERT INTO "ApiScopes" ("Id", "ApiResourceId", "Description", "DisplayName", "Emphasize", "Name", "Required", "ShowInDiscoveryDocument") OVERRIDING SYSTEM VALUE VALUES (4, 4, N'Settings Service Default Scope', N'Settings Service Default Scope', false, N'settings-service', false, true); END IF;
 
 PERFORM setval('"ApiScopes_Id_seq"', (SELECT MAX("Id") FROM "ApiScopes")+1);
 
 IF (SELECT count(*) FROM "ApiSecrets" WHERE "Id" = 1) = 0 THEN INSERT INTO "ApiSecrets" ("Id", "ApiResourceId", "Description", "Created", "Expiration", "Type", "Value") OVERRIDING SYSTEM VALUE VALUES (1, 1, NULL, current_date, NULL, N'SharedSecret', N'IlM2emwvAOUundGVXqrYSbgWsSgBdFiUBEFNm+zkZLw='); END IF;
 IF (SELECT count(*) FROM "ApiSecrets" WHERE "Id" = 2) = 0 THEN INSERT INTO "ApiSecrets" ("Id", "ApiResourceId", "Description", "Created", "Expiration", "Type", "Value") OVERRIDING SYSTEM VALUE VALUES (2, 2, NULL, current_date, NULL, N'SharedSecret', N'SwU06eRABG2C0MK+UuJGdLL064+6wIvtojzDZX+aE7o='); END IF;
 IF (SELECT count(*) FROM "ApiSecrets" WHERE "Id" = 3) = 0 THEN INSERT INTO "ApiSecrets" ("Id", "ApiResourceId", "Description", "Created", "Expiration", "Type", "Value") OVERRIDING SYSTEM VALUE VALUES (3, 3, NULL, current_date, NULL, N'SharedSecret', N'26O1szHj4CXM1nc/5Pi/K/l7AT751uN9/24QGNiZb70='); END IF;
+IF (SELECT count(*) FROM "ApiSecrets" WHERE "Id" = 4) = 0 THEN INSERT INTO "ApiSecrets" ("Id", "ApiResourceId", "Description", "Created", "Expiration", "Type", "Value") OVERRIDING SYSTEM VALUE VALUES (4, 4, NULL, current_date, NULL, N'SharedSecret', N'26O1szHj4CXM1nc/5Pi/K/l7AT751uN9/24QGNiZb70='); END IF;
 
 PERFORM setval('"ApiSecrets_Id_seq"', (SELECT MAX("Id") FROM "ApiSecrets")+1);
 
