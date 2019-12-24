@@ -53,6 +53,21 @@ services:
     networks:
       - lionize
 
+  settings:
+    image: tiksn/lionize-settings-service:latest
+    hostname: settings
+    domainname: settings
+    ports:
+      - "8087:8080"
+    env_file:
+      - variables.env
+    environment:
+      - ConnectionStrings__Mongo=mongodb://root:Xq5xrtzEKj44ueyd@mongo:27017/SettingsService?authSource=admin
+      - ApiResource__ApiName=settings-api
+      - ApiResource__ApiSecret=43xoIIj2QFyvFNevScaPvOFUWNQa4unVwT75TOlG5cmwFyAwcI+BFW4mpkeN52jXSAHbUya58gCTkl5K/PNyaQ==
+    networks:
+      - lionize
+
   web-ui:
     image: ashotnazaryan45/lionize-web-ui:latest
     ports:
