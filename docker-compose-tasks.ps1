@@ -14,7 +14,7 @@ Task Status {
     Exec { docker-compose -f (Resolve-Path "docker-compose/dependencies.yml").Path -f (Resolve-Path "docker-compose/microservices.yml").Path ps }
 }
 
-Task Pull {
+Task Pull -precondition { -not $SkipPulling } {
     Exec { docker-compose -f (Resolve-Path "docker-compose/dependencies.yml").Path -f (Resolve-Path "docker-compose/microservices.yml").Path pull }
 }
 
